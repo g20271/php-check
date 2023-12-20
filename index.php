@@ -38,6 +38,8 @@ error_reporting(E_ALL);
 
 
     if (array_key_exists("studentId", $_POST)) {
+        print "<hr>";
+        
         $studentId = $_POST["studentId"];
         print "あなたの学籍番号: <code>" . $studentId . "</code><br>";
 
@@ -45,6 +47,8 @@ error_reporting(E_ALL);
         $studentIdPath = implode("\n", $studentIdPath);
         if ($status != 0 || $studentIdPath === "") {
             print "<h3>予期しないエラーが発生しました。学籍番号が正しいか確認してください。<br>エラーコード: " . $status . "</h3><br>";
+
+            return -1;
         }
         
 
@@ -52,7 +56,7 @@ error_reporting(E_ALL);
 
         print "あなたのホームディレクトリ: <code>" . $studentIdPath . "</code><br>";
 
-        print "<br>";
+        print "<hr>";
 
         
 
@@ -73,12 +77,12 @@ error_reporting(E_ALL);
             $result = str_replace("./checkFolder", "./必要な提出ファイル", $result);
             
             if ($result == "") {
-                print "<h3>比較結果: 提出完了</h3>" ;
+                print '<h2>比較結果: <font color="green">提出完了</font>🟢</h2>' ;
                 print "<b>ファイル名での差異は検出されませんでした。提出おめでとうございます。</b>";
 
                 print "<pre>" . $result . "</pre>";
             } else {
-                print "<h3>比較結果: 未完了</h3>" ;
+                print '<h2>比較結果: <font color="red">未完了</font>🔴</h2>' ;
                 print "<pre>" . $result . "</pre>";
             }
 
