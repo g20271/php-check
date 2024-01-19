@@ -13,7 +13,7 @@ try {
     $tableName = "PrepareData";
     $createTableSQL = "
         CREATE TABLE IF NOT EXISTS $tableName (
-            FileName NVARCHAR(MAX)
+            FileName string,
         )
     ";
     // $createTableSQL = "
