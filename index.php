@@ -19,11 +19,11 @@ table{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP提出チェックツール (前期期末提出に対応)</title>
+    <title>PHP提出チェックツール (後期期末提出に対応)</title>
 </head>
 
 <body>
-    <h1>PHP提出チェックツール (前期期末提出に対応)</h1>
+    <h1>PHP提出チェックツール (後期期末提出に対応)</h1>
     
     <p>
         下のテキストボックスに学籍番号(例:g29999)を入力すると正しく提出しているか全自動でチェックできます。<br>
